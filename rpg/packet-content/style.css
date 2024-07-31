@@ -1,0 +1,157 @@
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.character-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: white;
+}
+
+.character-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: white;
+}
+
+.character-form label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-right: 10px;
+    padding-top: 10px;
+    background: white;
+}
+
+#dex {
+    margin-bottom: 15px;
+}
+
+#characters {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.character {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.204);
+}
+
+#create-a-character {
+    padding: 10px;
+}
+
+#createCharacterBtn {
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: auto;
+    padding: 15px;
+    border: 1px solid;
+    border-radius: 10px;
+    background: rgba(103, 39, 176, 0.626);
+    cursor: pointer;
+    transition: background-color .1s, transform .2s
+}
+
+#createCharacterBtn:hover {
+    transform: scale(1.01);
+    background: rgba(103, 39, 176, 0.544)
+}
+
+.overlay, .formerOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.overlay.visible, .formerOverlay.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.overlay-content, .formerOverlay-content {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.closeBtn {
+    cursor: pointer;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.7);
+    margin: 0;
+}
+
+.closeBtn:hover {
+    transform: scale(1.25);
+}
+
+#character-created {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.greatBtn {
+    padding: 10px;
+    background: rgba(103, 39, 176, 0.626);
+    cursor: pointer;
+    border: 1px black solid;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.greatBtn:hover {
+    transform: scale(1.05);
+    background: rgba(103, 39, 176, 0.5);
+}
+
+.overlay-content {
+    padding: 20px;
+}
+
+#openFormerOverlayBtn {
+    cursor: pointer;
+    font-size: 15px;
+    padding: 20px;
+    border: 1px black solid;
+    border-radius: 20px;
+    background: rgba(103, 39, 176, 0.626);
+    box-shadow: 0 0 10px rgba(71, 67, 67, 0.834);
+    margin: 10px;
+}
+
+#openFormerOverlayBtn:hover {
+    transform: scale(1.1);
+}

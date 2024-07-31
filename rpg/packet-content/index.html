@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG Character Customization</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <button id="openFormerOverlayBtn">Create a Character!</button>
+        <div class="formerOverlay" id="formerOverlay">
+            <div class="formerOverlay-content">
+                <div class="character-form">
+                    <span class="closeBtn" id="closeFormerOverlayBtn">X</span>
+                    <h2 id="create-a-character">Create a Character</h2>
+                    <div class="input-fields">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" placeholder="Enter your username here">
+                        
+                        <label for="class">Class:</label>
+                        <input type="text" id="class" placeholder="Enter your class here">
+                        
+                        <label for="str">Strength:</label>
+                        <input type="number" id="str" placeholder="Enter your strength here">
+                        
+                        <label for="agil">Agility:</label>
+                        <input type="number" id="agil" placeholder="Enter your agility here">
+                        
+                        <label for="intel">Intelligence:</label>
+                        <input type="number" id="intel" placeholder="Enter your intelligence here">
+                        
+                        <label for="dex">Dexterity:</label>
+                        <input type="number" id="dex" placeholder="Enter your dexterity here">
+                    </div>
+                    <button id="createCharacterBtn">Create Character!</button>
+                </div>
+            </div>
+        </div>
+        <div class="overlay" id="overlay">
+            <div class="overlay-content">
+                <h1><span id="character-created">Character Created!</span></h1>
+                <p>Your character has been successfully created.</p>
+                <button class="greatBtn" id="closeOverlayBtn">Great!</button>
+            </div>
+        </div>
+    </div>
+    <div id="characters"></div>
+    <script src="./rpg.js"></script>
+</body>
+</html>
